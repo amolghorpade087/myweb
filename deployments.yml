@@ -13,10 +13,6 @@ spec:
   template:
     metadata:
       labels: null
-      resources: null
-  requests:
-    cpu: "1"
-    memory: 1Gi
     app: myweb
     spec:
       containers:
