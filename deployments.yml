@@ -1,22 +1,21 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mywebdeployment
   labels:
-  app: myweb
+    app: myweb
 spec:
   replicas: 6
   selector:
-  matchLabels:
+    matchLabels:
       app: myweb
   template:
     metadata:
-      labels: null
-    app: myweb
+      labels:
+        app: myweb
     spec:
       containers:
-        - name: myweb
-          image: amolgh1987/my011-5
-          ports:
-            - containerPort: 8080
+      - name: myweb
+        image: amolgh1987/my011-5
+        ports:
+        - containerPort: 8080
