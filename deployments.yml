@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -11,11 +12,15 @@ spec:
       app: myweb
   template:
     metadata:
-      labels:
-        app: myweb
+      labels: null
+      resources: null
+  requests:
+    cpu: "1"
+    memory: 1Gi
+    app: myweb
     spec:
       containers:
-      - name: myweb
-        image: amolgh1987/my011-5
-        ports:
-        - containerPort: 8080
+        - name: myweb
+          image: amolgh1987/my011-5
+          ports:
+            - containerPort: 8080
